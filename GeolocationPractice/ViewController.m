@@ -21,6 +21,11 @@
 @property NSMutableArray *sortedUsersArray;
 @property NSArray *finalSortedUsersArray;
 @property MusicAppUser *currentUser;
+@property (strong, nonatomic) IBOutlet UILabel *firstLabel;
+@property (strong, nonatomic) IBOutlet UILabel *secondLabel;
+@property (strong, nonatomic) IBOutlet UILabel *thirdLabel;
+@property (strong, nonatomic) IBOutlet UILabel *fourthLabel;
+@property (strong, nonatomic) IBOutlet UILabel *fifthLabel;
 
 @end
 
@@ -42,34 +47,6 @@
     self.usersArray = [[NSMutableArray alloc]init];
 
     self.currentUser = [MusicAppUser currentUser];
-
-//    MusicAppUser *Mom = (MusicAppUser *)[MusicAppUser object];
-//    [Mom setUsername:@"Sissy"];
-//    [Mom setPassword:@"test"];
-//    [Mom setEmail:@"sissy@cool.com"];
-//    [Mom setLatitude:34.6709860];
-//    [Mom setLongitude:-82.2485610];
-//    [Mom signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//     }];
-//
-//
-//    MusicAppUser *Daniel = (MusicAppUser *)[MusicAppUser object];
-//    [Daniel setUsername:@"Daniel"];
-//    [Daniel setPassword:@"test"];
-//    [Daniel setEmail:@"daniel@cool.com"];
-//    [Daniel setLatitude:32.7594450];
-//    [Daniel setLongitude:-80.0000110];
-//    [Daniel signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//    }];
-//
-//    MusicAppUser *Joe = (MusicAppUser *)[MusicAppUser object];
-//    [Joe setUsername:@"Joe"];
-//    [Joe setPassword:@"test"];
-//    [Joe setEmail:@"joe@cool.com"];
-//    [Joe setLatitude:34.7704910];
-//    [Joe setLongitude:-92.3111950];
-//    [Joe signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//    }];
 
     if (self.currentUser)
     {
@@ -145,6 +122,31 @@
     for (MusicAppUser *thisUser in self.sortedUsersArray)
     {
         NSLog(@"%@", thisUser.username);
+    }
+
+    for (int x=0; x<5; x++)
+    {
+        MusicAppUser *thisUserNow = self.sortedUsersArray[x];
+        if (x == 0)
+        {
+            self.firstLabel.text = thisUserNow.username;
+        }
+        else if (x == 1)
+        {
+            self.secondLabel.text = thisUserNow.username;
+        }
+        else if (x == 2)
+        {
+            self.thirdLabel.text = thisUserNow.username;
+        }
+        else if (x == 3)
+        {
+            self.fourthLabel.text = thisUserNow.username;
+        }
+        else if (x == 4)
+        {
+            self.fifthLabel.text = thisUserNow.username;
+        }
     }
 }
 
