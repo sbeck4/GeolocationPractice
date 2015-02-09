@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MusicAppUser.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -16,6 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [MusicAppUser registerSubclass];
+    [Parse setApplicationId:@"wJ7F9oTOrmLyb5AGTtJPlgsjoUAsmch31qSz7tyd"
+                  clientKey:@"U3VLfPL2TyQsRzAyztF7wEq7E9kee4VCV9su2ZuL"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+
     // Override point for customization after application launch.
     return YES;
 }
