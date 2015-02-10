@@ -1,13 +1,15 @@
 //
-//  User.m
+//  ViewController.h
 //  GeolocationPractice
 //
 //  Created by Shannon Beck on 2/7/15.
 //  Copyright (c) 2015 Shannon Beck. All rights reserved.
 //
 
-#import "User.h"
+#import <UIKit/UIKit.h>
 
-@implementation User
+@interface RootViewController : UIViewController
+
 
 @end
+

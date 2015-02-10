@@ -6,13 +6,15 @@
 //  Copyright (c) 2015 Shannon Beck. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RootViewController.h"
 #import "SortedUser.h"
 #import "MusicAppUser.h"
+#import "ChatViewController.h"
+#import "Message.h"
 #import <CoreLocation/CoreLocation.h>
 #import <Parse/Parse.h>
 
-@interface ViewController () <CLLocationManagerDelegate>
+@interface RootViewController () <CLLocationManagerDelegate>
 
 @property NSMutableArray *usersArray;
 @property CLLocationManager *myLocationManager;
@@ -29,7 +31,7 @@
 
 @end
 
-@implementation ViewController
+@implementation RootViewController
 
 - (void)viewDidLoad
 {
@@ -124,30 +126,6 @@
         NSLog(@"%@", thisUser.username);
     }
 
-    for (int x=0; x<5; x++)
-    {
-        MusicAppUser *thisUserNow = self.sortedUsersArray[x];
-        if (x == 0)
-        {
-            self.firstLabel.text = thisUserNow.username;
-        }
-        else if (x == 1)
-        {
-            self.secondLabel.text = thisUserNow.username;
-        }
-        else if (x == 2)
-        {
-            self.thirdLabel.text = thisUserNow.username;
-        }
-        else if (x == 3)
-        {
-            self.fourthLabel.text = thisUserNow.username;
-        }
-        else if (x == 4)
-        {
-            self.fifthLabel.text = thisUserNow.username;
-        }
-    }
 }
 
 - (void)sortTheArray
@@ -158,6 +136,16 @@
     for (SortedUser *thisSortedUser in self.finalSortedUsersArray)
     {
         [self.sortedUsersArray addObject:thisSortedUser.user];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"chat"])
+    {
+        ChatViewController *chatVC = segue.destinationViewController;
+        chatVC.currentUser = self.currentUser;
+        chatVC.closestUsers = self.sortedUsersArray;
     }
 }
 

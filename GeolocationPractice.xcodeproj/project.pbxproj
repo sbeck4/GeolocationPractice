@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8328ACC91A89778000B1B08D /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8328ACC81A89778000B1B08D /* ChatViewController.m */; };
+		8328ACCC1A897C9900B1B08D /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 8328ACCB1A897C9900B1B08D /* Message.m */; };
+		8328ACCF1A897E6900B1B08D /* SingleChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8328ACCE1A897E6900B1B08D /* SingleChatViewController.m */; };
+		8328AD001A898D1A00B1B08D /* MessageText.m in Sources */ = {isa = PBXBuildFile; fileRef = 8328ACFF1A898D1A00B1B08D /* MessageText.m */; };
 		83474ED01A86F06E00FBE770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83474ECF1A86F06E00FBE770 /* main.m */; };
 		83474ED31A86F06E00FBE770 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83474ED21A86F06E00FBE770 /* AppDelegate.m */; };
-		83474ED61A86F06E00FBE770 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83474ED51A86F06E00FBE770 /* ViewController.m */; };
+		83474ED61A86F06E00FBE770 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83474ED51A86F06E00FBE770 /* RootViewController.m */; };
 		83474ED91A86F06E00FBE770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83474ED71A86F06E00FBE770 /* Main.storyboard */; };
 		83474EDB1A86F06E00FBE770 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83474EDA1A86F06E00FBE770 /* Images.xcassets */; };
 		83474EDE1A86F06E00FBE770 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83474EDC1A86F06E00FBE770 /* LaunchScreen.xib */; };
 		83474EEA1A86F06E00FBE770 /* GeolocationPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83474EE91A86F06E00FBE770 /* GeolocationPracticeTests.m */; };
-		83474EF51A86F0AB00FBE770 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 83474EF41A86F0AB00FBE770 /* User.m */; };
 		83474EF71A86F4B200FBE770 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83474EF61A86F4B200FBE770 /* CoreLocation.framework */; };
 		83474EFA1A870B6300FBE770 /* SortedUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 83474EF91A870B6300FBE770 /* SortedUser.m */; };
 		83474F011A881CEE00FBE770 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83474EFC1A881CEE00FBE770 /* Bolts.framework */; };
@@ -50,21 +53,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8328ACC71A89778000B1B08D /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		8328ACC81A89778000B1B08D /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		8328ACCA1A897C9900B1B08D /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = ../Message.h; sourceTree = "<group>"; };
+		8328ACCB1A897C9900B1B08D /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = ../Message.m; sourceTree = "<group>"; };
+		8328ACCD1A897E6900B1B08D /* SingleChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleChatViewController.h; sourceTree = "<group>"; };
+		8328ACCE1A897E6900B1B08D /* SingleChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleChatViewController.m; sourceTree = "<group>"; };
+		8328ACFE1A898D1A00B1B08D /* MessageText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageText.h; sourceTree = "<group>"; };
+		8328ACFF1A898D1A00B1B08D /* MessageText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageText.m; sourceTree = "<group>"; };
 		83474ECA1A86F06E00FBE770 /* GeolocationPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeolocationPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83474ECE1A86F06E00FBE770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83474ECF1A86F06E00FBE770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83474ED11A86F06E00FBE770 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83474ED21A86F06E00FBE770 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		83474ED41A86F06E00FBE770 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		83474ED51A86F06E00FBE770 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		83474ED41A86F06E00FBE770 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		83474ED51A86F06E00FBE770 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		83474ED81A86F06E00FBE770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83474EDA1A86F06E00FBE770 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83474EDD1A86F06E00FBE770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		83474EE31A86F06E00FBE770 /* GeolocationPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeolocationPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83474EE81A86F06E00FBE770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83474EE91A86F06E00FBE770 /* GeolocationPracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeolocationPracticeTests.m; sourceTree = "<group>"; };
-		83474EF31A86F0AB00FBE770 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		83474EF41A86F0AB00FBE770 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		83474EF61A86F4B200FBE770 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		83474EF81A870B6300FBE770 /* SortedUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortedUser.h; sourceTree = "<group>"; };
 		83474EF91A870B6300FBE770 /* SortedUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortedUser.m; sourceTree = "<group>"; };
@@ -129,6 +138,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8328AD011A898D2200B1B08D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83474ED11A86F06E00FBE770 /* AppDelegate.h */,
+				83474ED21A86F06E00FBE770 /* AppDelegate.m */,
+				83474EF81A870B6300FBE770 /* SortedUser.h */,
+				83474EF91A870B6300FBE770 /* SortedUser.m */,
+				8328ACCA1A897C9900B1B08D /* Message.h */,
+				8328ACCB1A897C9900B1B08D /* Message.m */,
+				8328ACFE1A898D1A00B1B08D /* MessageText.h */,
+				8328ACFF1A898D1A00B1B08D /* MessageText.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		83474EC11A86F06E00FBE770 = {
 			isa = PBXGroup;
 			children = (
@@ -150,21 +174,20 @@
 		83474ECC1A86F06E00FBE770 /* GeolocationPractice */ = {
 			isa = PBXGroup;
 			children = (
-				83474ED11A86F06E00FBE770 /* AppDelegate.h */,
-				83474ED21A86F06E00FBE770 /* AppDelegate.m */,
-				83474ED41A86F06E00FBE770 /* ViewController.h */,
-				83474ED51A86F06E00FBE770 /* ViewController.m */,
-				83474EF81A870B6300FBE770 /* SortedUser.h */,
-				83474EF91A870B6300FBE770 /* SortedUser.m */,
-				83474EF31A86F0AB00FBE770 /* User.h */,
-				83474EF41A86F0AB00FBE770 /* User.m */,
 				83474ED71A86F06E00FBE770 /* Main.storyboard */,
+				8328ACC71A89778000B1B08D /* ChatViewController.h */,
+				8328ACC81A89778000B1B08D /* ChatViewController.m */,
 				83474F1E1A88220B00FBE770 /* LoginViewController.h */,
 				83474F1F1A88220B00FBE770 /* LoginViewController.m */,
-				83474F211A88221600FBE770 /* SignUpViewController.h */,
-				83474F221A88221600FBE770 /* SignUpViewController.m */,
 				83474F2A1A882A2300FBE770 /* MusicAppUser.h */,
 				83474F2B1A882A2300FBE770 /* MusicAppUser.m */,
+				83474ED41A86F06E00FBE770 /* RootViewController.h */,
+				83474ED51A86F06E00FBE770 /* RootViewController.m */,
+				83474F211A88221600FBE770 /* SignUpViewController.h */,
+				83474F221A88221600FBE770 /* SignUpViewController.m */,
+				8328ACCD1A897E6900B1B08D /* SingleChatViewController.h */,
+				8328ACCE1A897E6900B1B08D /* SingleChatViewController.m */,
+				8328AD011A898D2200B1B08D /* Model */,
 				83474EDA1A86F06E00FBE770 /* Images.xcassets */,
 				83474EDC1A86F06E00FBE770 /* LaunchScreen.xib */,
 				83474ECD1A86F06E00FBE770 /* Supporting Files */,
@@ -324,14 +347,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83474EF51A86F0AB00FBE770 /* User.m in Sources */,
-				83474ED61A86F06E00FBE770 /* ViewController.m in Sources */,
+				83474ED61A86F06E00FBE770 /* RootViewController.m in Sources */,
 				83474F2C1A882A2300FBE770 /* MusicAppUser.m in Sources */,
 				83474F201A88220B00FBE770 /* LoginViewController.m in Sources */,
 				83474EFA1A870B6300FBE770 /* SortedUser.m in Sources */,
 				83474ED31A86F06E00FBE770 /* AppDelegate.m in Sources */,
 				83474F231A88221600FBE770 /* SignUpViewController.m in Sources */,
+				8328AD001A898D1A00B1B08D /* MessageText.m in Sources */,
+				8328ACCF1A897E6900B1B08D /* SingleChatViewController.m in Sources */,
 				83474ED01A86F06E00FBE770 /* main.m in Sources */,
+				8328ACCC1A897C9900B1B08D /* Message.m in Sources */,
+				8328ACC91A89778000B1B08D /* ChatViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
