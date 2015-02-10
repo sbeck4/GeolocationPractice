@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
 
+    self.messager1 = [[NSMutableArray alloc]init];
 
     PFQuery *query = [Message query];
     [query whereKey:@"messagedFromUserId" equalTo:self.currentUser.objectId];
@@ -77,21 +78,13 @@
 {
     PFQuery *query = [MessageText query];
     [query whereKey:@"messageId" equalTo:self.messageId];
-   // [query whereKey:@"sentBy" equalTo:self.currentUser.objectId];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
     {
-        self.messager1 = [[NSMutableArray alloc]init];
-        [self.messager1 addObjectsFromArray:objects];
+        [self.messager1 removeAllObjects];
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:false];
 
-        PFQuery *query2 = [MessageText query];
-        [query2 whereKey:@"messageId" equalTo:self.messageId];
-        [query2 whereKey:@"sentBy" notEqualTo:self.currentUser.objectId];
-        [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
-         {
-            self.messager2 = [[NSMutableArray alloc]init];
-             [self.messager2 addObjectsFromArray:objects];
-             [self.tableView reloadData];
-         }];
+        self.messager1 = [[objects sortedArrayUsingDescriptors:@[sortDescriptor]]mutableCopy];
+        [self.tableView reloadData];
     }];
 
 }
@@ -99,29 +92,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-   // if (indexPath.row % 2 == 0)
-   // {
-    if (self.messager1 != nil)
-    {
-        MessageText *messageText = [self.messager1 objectAtIndex:indexPath.row];
-        cell.textLabel.text = messageText.contentOfMessage;
-        // }
-        //    else
-        //    {
-        //        MessageText *messageText = [self.messager2 objectAtIndex:indexPath.row];
-        //        cell.textLabel.text = messageText.contentOfMessage;
-        //    }
-        
-        
 
+    if (self.messager1.count != 0)
+    {
+        MessageText *thisMessage = self.messager1[indexPath.row];
+
+        if ([thisMessage.sentBy isEqualToString:self.currentUser.objectId])
+        {
+            cell.textLabel.text = thisMessage.contentOfMessage;
+        }
+        else
+        {
+            cell.detailTextLabel.text = thisMessage.contentOfMessage;
+        }
     }
+
     return cell;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //return (self.messager1.count + self.messager2.count);
-    return 5;
+    return self.messager1.count;
+    //return  6;
 }
 
 - (IBAction)sendButtonTapped:(id)sender
